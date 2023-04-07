@@ -75,13 +75,9 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- Add Vet Database
+- Add Animal Table
+- Perform SELECT queries
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,13 +85,15 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
+- Create a local directory where you can clone the project
+
+- git clone `https://github.com/basnetlaxmi/vet-clinic.git`
+- Run all the command in the terminal or pgAdmin.
 
 ### Prerequisites
 
-In order to run this project you need:
+In order to run this project you need to:
 
 Install PSQL and PSQL shell
 
@@ -142,10 +140,8 @@ Example command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- Create Database and Table
 - Update, Delete table data
+- Use Join Table
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
