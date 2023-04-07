@@ -7,3 +7,4 @@ CREATE TABLE animals (
     NEUTERED BOOLEAN,
     WEIGHT_KG DECIMAL
 );
+ALTER TABLE animals ADD species varchar(255);
