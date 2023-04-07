@@ -8,3 +8,20 @@
  SELECT * from animals where neutered = true;
  SELECT * from animals WHERE name not IN('Gabumon');
  SELECT * from animals WHERE weight_kg between 10.4 and 17.3;
+
+-- Delete all animals born after Jan 1st, 2022.
+ BEGIN transaction;
+ DELETE from animals WHERE date_of_birth > '2022-01-01';
+
+--  Create a savepoint for the transaction.
+ SAVEPOINT first_savepoint;
+
+-- Update all animals' weight to be their weight multiplied by -1.
+UPDATE animals SET weight_kg = weight_kg * -1;
+
+-- Rollback to the savepoint
+ ROLLBACK TO first_savepoint;
+-- Update all animals' weights that are negative to be their weight multiplied by -1.
+ UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0;
+-- Commit transaction
+COMMIT;
