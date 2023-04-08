@@ -8,3 +8,10 @@ CREATE TABLE animals (
     WEIGHT_KG DECIMAL
 );
 ALTER TABLE animals ADD species varchar(255);
+ALTER TABLE animals DROP COLUMN id;
+ALTER TABLE animals ADD COLUMN id SERIAL PRIMARY KEY;
+ALTER TABLE animals DROP COLUMN species;
+ALTER TABLE animals ADD species_id INT;
+ALTER TABLE animals ADD FOREIGN KEY (species_id) REFERENCES species(id);
+ALTER TABLE animals ADD owner_id INT;
+ALTER TABLE animals ADD FOREIGN KEY(owner_id) REFERENCES owners(id);
